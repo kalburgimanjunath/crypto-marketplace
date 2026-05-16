@@ -10,13 +10,16 @@ export default function App() {
   return (
     <div className="App">
       {isLogin ? (
-        <Routes>
-          <Route path="/dashboard" exact element={<Dashboard />} />
-        </Routes>
+        <>
+          <Header />
+          <Routes>
+            <Route path="/dashboard" exact element={<Dashboard />} />
+          </Routes>
+        </>
       ) : (
         <Routes>
-          <Header />
-          <Route path="/*" exact element={<Home />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/dashboard" exact element={<Dashboard />} />
         </Routes>
       )}
       <Footer />

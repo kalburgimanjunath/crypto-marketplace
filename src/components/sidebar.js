@@ -19,7 +19,7 @@ export default function Sidebar() {
       <Search />
       {menus.map((item) => {
         return (
-          <div className="p-3 m-1 hover:bg-black hover:cursor-pointer">
+          <div className="p-3 m-1 capitalize hover:bg-black hover:cursor-pointer">
             {item}
           </div>
         );
